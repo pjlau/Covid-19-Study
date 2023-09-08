@@ -9,7 +9,6 @@ library(tidyverse) # metapackage of all tidyverse packages
 suppressPackageStartupMessages(library(tidyverse))
 library(dplyr)
 library(ggplot2)
-list.files(path = "../input")
 library(scales)
 library(maps)
 ```
@@ -25,7 +24,7 @@ Q2: What are the top-10 countries with the most death counts? <br>
 
 ```{r}
 #options(warn=-1)
-dir <- '../input/covid19-data-from-john-hopkins-university/'
+dir <- '../'
 confirmed_g <- 'RAW_global_confirmed_cases.csv'
 gconf_dir <- paste(dir,confirmed_g,sep="")
 gconf <- read_csv(gconf_dir,show_col_types = FALSE,col_names = TRUE)
